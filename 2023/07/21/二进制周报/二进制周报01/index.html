@@ -6,17 +6,69 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 问题分享 | chg</title>
+  <title>二进制周报01 | chg</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="chg">
-<meta property="og:url" content="http://example.com/tags/%E9%97%AE%E9%A2%98%E5%88%86%E4%BA%AB/index.html">
+  <meta name="description" content="本周学习内容 主要集中在汇编的了解学习  具体学习内容模式定义 定义了程序使用的指令集、互作模式和格式  win32环境中.386是必不可少的    后面带p则是伪指令  内存模式  但是主要使用的是flat  因win32程序只有一种内存模式，flat模式，没有64kb的限制   语言模式 除了在.model语句中指定内存模式意以外，还应该指定语言模式   stdcall的参数压栈方式是：从右往">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二进制周报01">
+<meta property="og:url" content="http://example.com/2023/07/21/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%91%A8%E6%8A%A5/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%91%A8%E6%8A%A501/index.html">
 <meta property="og:site_name" content="chg">
+<meta property="og:description" content="本周学习内容 主要集中在汇编的了解学习  具体学习内容模式定义 定义了程序使用的指令集、互作模式和格式  win32环境中.386是必不可少的    后面带p则是伪指令  内存模式  但是主要使用的是flat  因win32程序只有一种内存模式，flat模式，没有64kb的限制   语言模式 除了在.model语句中指定内存模式意以外，还应该指定语言模式   stdcall的参数压栈方式是：从右往">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715173340028.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715173449273.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715173747893.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715174527757.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715175305850.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715180311206.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715194544213.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715195000045.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715195240031.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715195356997.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715201548889.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715201811427.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715201856489.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715202519213.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715203657995.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715203928273.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715204231533.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715204632946.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715215236758.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715215645107.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/undefinedimage-20230716084312490.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716085208255.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716085421317.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716090026683.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716090405835.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716090423891.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716090725511.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716091713070.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716093250606.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716094212170.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716095945277.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716100100399.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716101511844.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716102702916.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716104922959.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716105002004.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716105222790.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716105929452.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716110042079.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716110153358.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716111534344.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716111607802.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716112122258.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716112706165.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716122834546.png">
+<meta property="og:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716123018164.png">
+<meta property="article:published_time" content="2023-07-21T03:22:46.000Z">
+<meta property="article:modified_time" content="2023-07-21T06:26:11.953Z">
 <meta property="article:author" content="August Rosenberg">
+<meta property="article:tag" content="二进制周报">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715173340028.png">
   
     <link rel="alternative" href="/atom.xml" title="chg" type="application/atom+xml">
   
@@ -222,65 +274,436 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-二进制周报/二进制周报01" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/04/22/%E6%9C%89%E8%B6%A3%E9%97%AE%E9%A2%98/%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98/" class="archive-article-date">
-        <time datetime="2023-04-22T13:45:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-22</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/04/22/%E6%9C%89%E8%B6%A3%E9%97%AE%E9%A2%98/%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98/" target="_blank">汉诺塔（java详解）</a>
   
+    <h1 class="article-title" itemprop="name">
+      二进制周报01
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2023/07/21/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%91%A8%E6%8A%A5/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%91%A8%E6%8A%A501/" class="archive-article-date">
+        <time datetime="2023-07-21T03:22:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-07-21</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">849字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="本周学习内容"><a href="#本周学习内容" class="headerlink" title="本周学习内容"></a>本周学习内容</h1><ol>
+<li>主要集中在汇编的了解学习</li>
+</ol>
+<h1 id="具体学习内容"><a href="#具体学习内容" class="headerlink" title="具体学习内容"></a>具体学习内容</h1><h2 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h2><ol>
+<li><p>定义了程序使用的指令集、互作模式和格式</p>
+</li>
+<li><p>win32环境中<code>.386</code>是必不可少的</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715173340028.png" alt="image-20230715173340028"></p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715173449273.png" alt="image-20230715173449273"></p>
+</li>
+<li><p>后面带<code>p</code>则是伪指令</p>
+</li>
+<li><p>内存模式</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715173747893.png" alt="image-20230715173747893"></p>
+<p>但是主要使用的是<code>flat</code></p>
+<blockquote>
+<p>因win32程序只有一种内存模式，flat模式，没有64kb的限制</p>
+</blockquote>
+</li>
+<li><p>语言模式</p>
+<p>除了在<code>.model</code>语句中指定内存模式意以外，还应该指定语言模式</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715174527757.png" alt="image-20230715174527757"></p>
+<ul>
+<li>stdcall的参数压栈方式是：从右往左</li>
+</ul>
+</li>
+<li><p><code>option</code>语句</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715175305850.png" alt="image-20230715175305850"></p>
+</li>
+</ol>
+<h2 id="短的定义"><a href="#短的定义" class="headerlink" title="短的定义"></a>短的定义</h2><p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715180311206.png" alt="image-20230715180311206"></p>
+<h3 id="数据段"><a href="#数据段" class="headerlink" title="数据段"></a>数据段</h3><p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715194544213.png" alt="image-20230715194544213"></p>
+<ol>
+<li><p>可读可写的已定义的变量</p>
+<p>这些数据在<code>.data</code>的段中，是已初始化的数据段。<code>.data</code>的段存放在可执行文件的_DATA字节区内</p>
+</li>
+<li><p>可读可写的未定义的变量</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715195000045.png" alt="image-20230715195000045"></p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715195240031.png" alt="image-20230715195240031"></p>
+</li>
+<li><p>常量</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715195356997.png" alt="image-20230715195356997"></p>
+</li>
+</ol>
+<h3 id="代码段"><a href="#代码段" class="headerlink" title="代码段"></a>代码段</h3><ol>
+<li>所有的指令都在代码段里面</li>
+<li>代码段是放在_TEXT的节区中的</li>
+</ol>
+<h2 id="简单知识点"><a href="#简单知识点" class="headerlink" title="简单知识点"></a>简单知识点</h2><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><ol>
+<li><p>在代码前面写”;”，代表注释处理 </p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715201548889.png" alt="image-20230715201548889"></p>
+</li>
+</ol>
+<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><ol>
+<li>由于程序的某一行过长，不利于阅读时可以使用<code>\</code>做换行符</li>
+</ol>
+<h3 id="调用API函数"><a href="#调用API函数" class="headerlink" title="调用API函数"></a>调用API函数</h3><p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715201811427.png" alt="image-20230715201811427"></p>
+<p> <img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715201856489.png" alt="image-20230715201856489"></p>
+<h3 id="动态链接库（dll）"><a href="#动态链接库（dll）" class="headerlink" title="动态链接库（dll）"></a>动态链接库（dll）</h3><p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715202519213.png" alt="image-20230715202519213"></p>
+<h3 id="使用invoke语句"><a href="#使用invoke语句" class="headerlink" title="使用invoke语句"></a>使用invoke语句</h3><p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715203657995.png" alt="image-20230715203657995"></p>
+<h3 id="API函数的返回值"><a href="#API函数的返回值" class="headerlink" title="API函数的返回值"></a>API函数的返回值</h3><p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715203928273.png" alt="image-20230715203928273"></p>
+<ol>
+<li><p>返回值保存在<code>eax</code>寄存器当中‘</p>
+</li>
+<li><p>返回值都是4个字节。</p>
+<p>如果超出4个字节的字符串，这个时候返回的就是指针（32位下的指针是4个字节）</p>
+</li>
+</ol>
+<h3 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h3><p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715204231533.png" alt="image-20230715204231533"><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715204632946.png" alt="image-20230715204632946"></p>
+<ol>
+<li><p>使用<code>proto</code></p>
+</li>
+<li><p>距离</p>
+<blockquote>
+<p>win32是4G 的平坦段，无所谓距离</p>
+<p>在Win32汇编中，函数定义时使用的距离（distance）是指函数内部的相对偏移量，用于表示函数内部的标签或指令之间的距离。</p>
+<p>在汇编语言中，函数通常由一系列的指令组成，每个指令都有一个相对于函数起始地址的偏移量。这个偏移量被称为距离。</p>
+</blockquote>
+</li>
+<li><p>对于win32汇编的参数值只有dword一种，也就是说只有4个字节</p>
+</li>
+</ol>
+<h3 id="include语句"><a href="#include语句" class="headerlink" title="include语句"></a>include语句</h3><ol>
+<li><p>包含头文件</p>
+</li>
+<li><p>包含的两个方式】</p>
+<p><code>include &lt;头文件的名字&gt;</code></p>
+<p><code>include 头文件的名字 </code></p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715215236758.png" alt="image-20230715215236758"></p>
+</li>
+</ol>
+<h3 id="includelib"><a href="#includelib" class="headerlink" title="includelib"></a>includelib</h3><ol>
+<li><p>导入库文件</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230715215645107.png" alt="image-20230715215645107"></p>
+</li>
+<li><p>一般库文件和动态链接库的名字相同，后缀不同</p>
+</li>
+<li><p>使用lib更像是一个借用，但是使用include是将文件拷贝到程序当中</p>
+</li>
+</ol>
+<h3 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h3><p> <img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/undefinedimage-20230716084312490.png" alt="image-20230716084312490"></p>
+<ol>
+<li><p>MB_OK是一个按钮，表示确定</p>
+<p>具体的信息可以查vs的字典  </p>
+</li>
+<li><p>在win32汇编里面不需要使用je,jmp等</p>
+<p>可以使用if,elseif,else </p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716085208255.png" alt="image-20230716085208255"></p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716085421317.png" alt="image-20230716085421317"></p>
+</li>
+</ol>
+<h3 id="标号"><a href="#标号" class="headerlink" title="标号"></a>标号</h3><ol>
+<li><p>可以理解为c语言的<code>goto</code></p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716090026683.png" alt="image-20230716090026683"></p>
+</li>
+<li><p>为了解决标号名称的浪费可以使用</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716090405835.png" alt="image-20230716090405835"></p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716090423891.png" alt="image-20230716090423891"></p>
+</li>
+</ol>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><ol>
+<li><p>类型</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716090725511.png" alt="image-20230716090725511"></p>
+</li>
+</ol>
+<h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><ol>
+<li><p>通过修改堆栈的指针<code>esp</code>来预留需要的空间</p>
+<p>其实这个和C语言的调用是一样的</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716091713070.png" alt="image-20230716091713070"></p>
+</li>
+<li><p>使用<code>local</code>定义局部变量</p>
+</li>
+<li><p>而且数据必须在代码之前 </p>
+</li>
+<li><p>局部变量的使用</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716093250606.png" alt="image-20230716093250606"></p>
+</li>
+<li><p>对局部变量的初始化</p>
+<p><code>RtlZeroMemory</code>这个API函数经行初始化</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716094212170.png" alt="image-20230716094212170"></p>
+</li>
+</ol>
+<h4 id="变量的使用"><a href="#变量的使用" class="headerlink" title="变量的使用"></a>变量的使用</h4><ol>
+<li><p>强制类型转换</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716095945277.png" alt="image-20230716095945277"></p>
+</li>
+</ol>
+<h4 id="变量的尺寸"><a href="#变量的尺寸" class="headerlink" title="变量的尺寸"></a>变量的尺寸</h4><ol>
+<li><p>数据的长度计算</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716100100399.png" alt="image-20230716100100399"></p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716101511844.png" alt="image-20230716101511844"></p>
+</li>
+</ol>
+<h4 id="获取变量的地址"><a href="#获取变量的地址" class="headerlink" title="获取变量的地址"></a>获取变量的地址</h4><ol>
+<li><p>使用<code>lea</code></p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716102702916.png" alt="image-20230716102702916"></p>
+</li>
+<li><p>解析addr</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716104922959.png" alt="image-20230716104922959"></p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716105002004.png" alt="image-20230716105002004"></p>
+<p>在有addr的程序中，不用eax</p>
+</li>
+</ol>
+<h3 id="使用子程序"><a href="#使用子程序" class="headerlink" title="使用子程序"></a>使用子程序</h3><p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716105222790.png" alt="image-20230716105222790"></p>
+<ol>
+<li><p>相当于函数  </p>
+</li>
+<li><p>参数的传递和堆栈的平衡</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716105929452.png" alt="image-20230716105929452"></p>
+<p> <img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716110042079.png" alt="image-20230716110042079"></p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716110153358.png" alt="image-20230716110153358"></p>
+</li>
+</ol>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><ol>
+<li><p>实现的语法</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716111534344.png" alt="image-20230716111534344"></p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716111607802.png" alt="image-20230716111607802"> </p>
+<p>例子：</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716112122258.png" alt="image-20230716112122258"></p>
+</li>
+<li><p>实现引用</p>
+<ul>
+<li><p>使用点操作符</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716112706165.png" alt="image-20230716112706165"></p>
+</li>
+<li><p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716122834546.png" alt="image-20230716122834546"></p>
+</li>
+<li><p>使用<code>assume</code>伪指令把寄存器预先定义为结构指针</p>
+<p><img src="https://compilation-1317182407.cos.ap-nanjing.myqcloud.com/win32%E6%B1%87%E7%BC%96/image-20230716123018164.png" alt="image-20230716123018164"></p>
+</li>
+</ul>
+</li>
+</ol>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/ali.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          August Rosenberg
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2023/07/21/二进制周报/二进制周报01/" title="二进制周报01" target="_blank">http://example.com/2023/07/21/二进制周报/二进制周报01/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">问题分享</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">二进制周报</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/07/21/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%91%A8%E6%8A%A5/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%91%A8%E6%8A%A501/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2023/08/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/07/21/%E7%A0%94%E5%8F%91%E5%91%A8%E6%8A%A5/%E7%A0%94%E5%8F%91%E5%91%A8%E6%8A%A501/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">研发周报01</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -321,9 +744,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
