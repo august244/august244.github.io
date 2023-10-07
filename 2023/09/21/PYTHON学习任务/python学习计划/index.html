@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://allinit-1317182407.cos.ap-nanjing.myqcloud.com/others/image-20230921234737043.png">
 <meta property="og:image" content="https://allinit-1317182407.cos.ap-nanjing.myqcloud.com/others/image-20230921235028643.png">
 <meta property="article:published_time" content="2023-09-21T15:42:37.000Z">
-<meta property="article:modified_time" content="2023-10-04T16:31:46.669Z">
+<meta property="article:modified_time" content="2023-10-06T16:23:00.621Z">
 <meta property="article:author" content="August Rosenberg">
 <meta property="article:tag" content="PYTHON学习任务">
 <meta name="twitter:card" content="summary">
@@ -263,7 +263,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">775字</span>
+      <span class="post-count">1k字</span>
     </span>
   </span>
 
@@ -272,7 +272,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">3分</span>
+      <span class="post-count">4分</span>
     </span>
   </span>
 </div>
@@ -441,7 +441,33 @@ if-else</p>
 <li>查找，返回下标</li>
 <li>是否是数字构成</li>
 </ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>()</span><br><span class="line">upper()</span><br><span class="line">find()</span><br><span class="line">isdigit()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
+<li><p><input disabled="" type="checkbox"> 
+格式化字符串</p>
+</li>
+</ul>
+<h1 id="23-10-7"><a href="#23-10-7" class="headerlink" title="23_10_7"></a>23_10_7</h1><ul>
+<li><p><input disabled="" type="checkbox"> 
+使用列表</p>
+<blockquote>
+<p>定义列表可以将列表的元素放在<code>[]</code></p>
+<p>list1 &#x3D; [1, 3, 5, 7, 100]</p>
+<p>看一个比较东西：</p>
+<p>list1&#x3D;[‘hello’]</p>
+<p>list2&#x3D;list1*3</p>
+<p>print(list2) # [‘hello’, ‘hello’, ‘hello’]</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">下标(索引)运算</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(list1[<span class="number">0</span>]) <span class="comment"># 1</span></span><br><span class="line"><span class="built_in">print</span>(list1[<span class="number">4</span>]) <span class="comment"># 100</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># range 循环</span></span><br><span class="line"><span class="keyword">for</span> index <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(list1)):</span><br><span class="line">    <span class="built_in">print</span>(list1[index])</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="comment"># 通过for循环遍历列表元素</span></span><br><span class="line"><span class="keyword">for</span> elem <span class="keyword">in</span> list1:</span><br><span class="line">    <span class="built_in">print</span>(elem)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="comment"># 通过enumerate函数处理列表之后再遍历可以同时获得元素索引和值</span></span><br><span class="line"><span class="keyword">for</span> index, elem <span class="keyword">in</span> <span class="built_in">enumerate</span>(list1):</span><br><span class="line">    <span class="built_in">print</span>(index, elem)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="comment"># 添加元素</span></span><br><span class="line">list1.append(<span class="number">200</span>)</span><br><span class="line">list1.insert(<span class="number">1</span>, <span class="number">400</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 从指定的位置删除元素</span></span><br><span class="line">list1.pop(<span class="number">0</span>)</span><br><span class="line">list1.pop(<span class="built_in">len</span>(list1) - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 清空列表元素</span></span><br><span class="line">list1.clear()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表切片</span></span><br><span class="line">fruits2 = fruits[<span class="number">1</span>:<span class="number">4</span>]</span><br></pre></td></tr></table></figure>
+
+<p>可以尝试其他的东西，我觉得用的多的就是这些</p>
+</li>
+</ul>
+<h1 id="23-10-8"><a href="#23-10-8" class="headerlink" title="23_10_8"></a>23_10_8</h1><p>今天学习一下生成器</p>
+<ul>
+<li><p><input disabled="" type="checkbox"> 
+生成器</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>)]</span><br><span class="line">f = [x + y <span class="keyword">for</span> x <span class="keyword">in</span> <span class="string">&#x27;ABCDE&#x27;</span> <span class="keyword">for</span> y <span class="keyword">in</span> <span class="string">&#x27;1234567&#x27;</span>]</span><br></pre></td></tr></table></figure></li>
 </ul>
 
     
@@ -767,7 +793,7 @@ if-else</p>
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">PYTHON学习任务</a>
+                <a href="javascript:void(0)" class="js-tag color3">English</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -775,11 +801,11 @@ if-else</p>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">English</a>
+                <a href="javascript:void(0)" class="js-tag color1">二进制周报</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">二进制周报</a>
+                <a href="javascript:void(0)" class="js-tag color1">PYTHON学习任务</a>
               </li>
              
               <li class="article-tag-list-item">
