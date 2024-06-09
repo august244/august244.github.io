@@ -16,24 +16,24 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="计算机学习">
+    <meta name="description" content="简介漏洞挖掘不像是渗透，挖掘不需要打穿，点到为止就可以了，写这个的原因是，学习怎么挖掘sql漏洞 但是挖掘漏洞之前都必须要实现一下 网站的正常功能 信息收集不管是漏洞挖掘还是渗透测试，最重要的都是信息收集 主要的方法就是  网络空间搜索引擎（对edu有奇效）  谷歌搜索语法  about.php?cartID&#x3D;accinfo.php?cartld&#x3D;acclogin.php?ca">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://august244.github.io/2024/06/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="sql挖掘技巧">
+<meta property="og:url" content="http://august244.github.io/2024/01/09/src/sql%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="计算机学习">
+<meta property="og:description" content="简介漏洞挖掘不像是渗透，挖掘不需要打穿，点到为止就可以了，写这个的原因是，学习怎么挖掘sql漏洞 但是挖掘漏洞之前都必须要实现一下 网站的正常功能 信息收集不管是漏洞挖掘还是渗透测试，最重要的都是信息收集 主要的方法就是  网络空间搜索引擎（对edu有奇效）  谷歌搜索语法  about.php?cartID&#x3D;accinfo.php?cartld&#x3D;acclogin.php?ca">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="c:\Users\12414\AppData\Roaming\Typora\typora-user-images\image-20230619202404899.png">
-<meta property="og:image" content="c:\Users\12414\AppData\Roaming\Typora\typora-user-images\image-20230619204057553.png">
-<meta property="article:published_time" content="2024-06-08T12:30:16.714Z">
-<meta property="article:modified_time" content="2023-06-19T16:55:43.102Z">
+<meta property="og:image" content="https://allinit-1317182407.cos.ap-nanjing.myqcloud.com/src/sql%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7/image-20240320113010458.png">
+<meta property="article:published_time" content="2024-01-09T13:36:35.000Z">
+<meta property="article:modified_time" content="2024-03-20T03:54:52.644Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="src">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="c:\Users\12414\AppData\Roaming\Typora\typora-user-images\image-20230619202404899.png">
+<meta name="twitter:image" content="https://allinit-1317182407.cos.ap-nanjing.myqcloud.com/src/sql%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7/image-20240320113010458.png">
   
   
   
-  <title>Hexo</title>
+  <title>sql挖掘技巧 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="sql挖掘技巧"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-06-08 20:30" pubdate>
-          2024年6月8日 晚上
+        <time datetime="2024-01-09 21:36" pubdate>
+          2024年1月9日 晚上
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          5 字
+          465 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          1 分钟
+          4 分钟
         
       </span>
     
@@ -270,13 +270,73 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">sql挖掘技巧</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="计算机学习"><a href="#计算机学习" class="headerlink" title="计算机学习"></a>计算机学习</h1><p><img src="C:\Users\12414\AppData\Roaming\Typora\typora-user-images\image-20230619202404899.png" srcset="/img/loading.gif" lazyload alt="image-20230619202404899"></p>
-<p><img src="C:\Users\12414\AppData\Roaming\Typora\typora-user-images\image-20230619204057553.png" srcset="/img/loading.gif" lazyload alt="image-20230619204057553"></p>
+                <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>漏洞挖掘不像是渗透，挖掘不需要打穿，点到为止就可以了，写这个的原因是，学习怎么挖掘sql漏洞</p>
+<p>但是挖掘漏洞之前都必须要实现一下 网站的正常功能</p>
+<h1 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h1><p>不管是漏洞挖掘还是渗透测试，最重要的都是信息收集</p>
+<p>主要的方法就是</p>
+<ol>
+<li><p>网络空间搜索引擎（对edu有奇效）</p>
+</li>
+<li><p>谷歌搜索语法</p>
+<blockquote>
+<p>about.php?cartID&#x3D;<br>accinfo.php?cartld&#x3D;<br>acclogin.php?cartID&#x3D;<br>add.php?bookid&#x3D;<br>add_cart.php?num&#x3D;<br>addcart.php?addltem.php add-to-cart.php?ID&#x3D;<br>addToCart.php?idProduct&#x3D;<br>addtomylist.php?Prodld&#x3D;<br>adminEditProductFields.php?intProdID&#x3D;<br>advSearch_h.php?idCategory&#x3D;<br>affiliate.php?ID&#x3D;<br>affiliate-agreement.cfm?storeid&#x3D;<br>affiliates.php?id&#x3D;<br>ancillary.php?ID&#x3D;<br>archive.php?id&#x3D;<br>article.php?id&#x3D;<br>phpx?PagelD basket.php?id&#x3D;<br>Book.php?bookID&#x3D;<br>book_list.php?bookid&#x3D;<br>book_view.php?bookid&#x3D;<br>BookDetails.php?ID&#x3D;<br>browse.php?catid&#x3D;</p>
+</blockquote>
+</li>
+<li><p>添加单引号。确认是否存在SQL注入漏洞</p>
+</li>
+<li><p>xss payload </p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/payloadbox/</span>xss-payload-list<span class="hljs-regexp">/blob/m</span>aster<span class="hljs-regexp">/Intruder/</span>xss-payload-list.txt<br><br></code></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="挖掘步骤"><a href="#挖掘步骤" class="headerlink" title="挖掘步骤"></a>挖掘步骤</h1><ol>
+<li><p>确定和数据库交互的点</p>
+</li>
+<li><p>判断是否是伪静态</p>
+<p>发现如果是静态的网页那就不用注入了</p>
+</li>
+<li><p>判断是否存在可以利用的关键参数</p>
+<p>优先关注id 等参数</p>
+<p>版本号或者是时间的话，概率不大</p>
+</li>
+<li><p>手工注入或者是工具注入</p>
+</li>
+</ol>
+<h1 id="手工注入"><a href="#手工注入" class="headerlink" title="手工注入"></a>手工注入</h1><p><img src="https://allinit-1317182407.cos.ap-nanjing.myqcloud.com/src/sql%E6%8C%96%E6%8E%98%E6%8A%80%E5%B7%A7/image-20240320113010458.png" srcset="/img/loading.gif" lazyload alt="image-20240320113010458"></p>
+<ol>
+<li><p>明确请求方式</p>
+<p>请求方式可以查看，关键参数</p>
+<ul>
+<li><p>get</p>
+<p>url</p>
+</li>
+<li><p>post</p>
+<p>请求正文</p>
+</li>
+</ul>
+</li>
+<li><p>尝试注入参数是否可行</p>
+</li>
+<li><p>尝试referer参数&#x2F;XFF</p>
+</li>
+<li><p>尝试cookie 和Usert-Agent</p>
+</li>
+</ol>
+<h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><h2 id="伪静态网站"><a href="#伪静态网站" class="headerlink" title="伪静态网站"></a>伪静态网站</h2><p>常见的伪静态网站，将参数藏入url 中</p>
+<p>比如</p>
+<blockquote>
+<p>xxx&#x2F;search&#x2F;xxx</p>
+</blockquote>
+<p>这个就是一个搜索功能，就可以测试是否存在</p>
+<p>如果是使用sql-map的话，这种url 就必须在参数的位置添加*</p>
+<p>比如</p>
+<blockquote>
+<p>-u   “xxx&#x2F;search&#x2F;1*&#x2F;asdfasdf”</p>
+</blockquote>
+<p>他就会让你判断是否shi</p>
 
                 
               </div>
@@ -286,6 +346,13 @@
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/src/" class="print-no-link">#src</a>
+      
+    </div>
+  
 </div>
 
 
@@ -294,8 +361,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://august244.github.io/2024/06/08/计算机学习/计算机学习/</div>
+      <div>sql挖掘技巧</div>
+      <div>http://august244.github.io/2024/01/09/src/sql挖掘技巧/</div>
     </div>
     <div class="license-meta">
       
@@ -307,7 +374,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年6月8日</div>
+          <div>2024年1月9日</div>
         </div>
       
       
@@ -339,12 +406,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2024/02/14/src/%E6%9D%82%E8%AE%B0/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/05/11/src/%E7%AE%80%E5%8D%95%E7%9A%84%E6%8D%A1%E6%BC%8F%E6%BC%8F%E6%B4%9E/" title="简单的捡漏漏洞">
-                        <span class="hidden-mobile">简单的捡漏漏洞</span>
+                      <a href="/2023/10/23/%E6%8A%80%E6%9C%AF%E9%9A%8F%E7%AC%94/vscode-platformIO/" title="vscode+platformIO">
+                        <span class="hidden-mobile">vscode+platformIO</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
