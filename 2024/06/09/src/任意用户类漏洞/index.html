@@ -16,15 +16,15 @@
   <meta name="author" content="August Rosenberg">
   <meta name="keywords" content="">
   
-    <meta name="description" content="如果在某一个功能点存在下面的漏洞，可能其他功能点都存在这个漏洞 四（六）位验证码可爆破出现的位置 只要是发短信的都可能存在  挖掘方法 尝试底频率爆破  验证码回显挖掘方法 就直接看返回包  只验证了验证码，没有验证绑定简单的说就是拿别人的验证码，自己使用 修改返回包bp 修改返回的状态 可以将返回包改为 false -&gt; success true  400  -&gt;  200 0 1">
+    <meta name="description" content="如果在某一个功能点存在下面的漏洞，可能其他功能点都存在这个漏洞 四（六）位验证码可爆破出现的位置 只要是发短信的都可能存在  挖掘方法    尝试底频率爆破验证码回显挖掘方法 就直接看返回包  变形出现在需要邀请码的情况下，当我们使用一个错误的邀请码，抓包对面回了一个正确的验证码，或者是返回的是正确的返回包的验证码 只验证了验证码，没有验证绑定简单的说就是拿别人的验证码，自己使用 修改返回包bp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="任意用户类漏洞">
 <meta property="og:url" content="http://august244.github.io/2024/06/09/src/%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E7%B1%BB%E6%BC%8F%E6%B4%9E/index.html">
 <meta property="og:site_name" content="august">
-<meta property="og:description" content="如果在某一个功能点存在下面的漏洞，可能其他功能点都存在这个漏洞 四（六）位验证码可爆破出现的位置 只要是发短信的都可能存在  挖掘方法 尝试底频率爆破  验证码回显挖掘方法 就直接看返回包  只验证了验证码，没有验证绑定简单的说就是拿别人的验证码，自己使用 修改返回包bp 修改返回的状态 可以将返回包改为 false -&gt; success true  400  -&gt;  200 0 1">
+<meta property="og:description" content="如果在某一个功能点存在下面的漏洞，可能其他功能点都存在这个漏洞 四（六）位验证码可爆破出现的位置 只要是发短信的都可能存在  挖掘方法    尝试底频率爆破验证码回显挖掘方法 就直接看返回包  变形出现在需要邀请码的情况下，当我们使用一个错误的邀请码，抓包对面回了一个正确的验证码，或者是返回的是正确的返回包的验证码 只验证了验证码，没有验证绑定简单的说就是拿别人的验证码，自己使用 修改返回包bp">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-06-09T06:28:45.000Z">
-<meta property="article:modified_time" content="2024-06-09T08:02:32.629Z">
+<meta property="article:modified_time" content="2024-06-27T06:31:35.085Z">
 <meta property="article:author" content="August Rosenberg">
 <meta property="article:tag" content="src">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          350 words
+          765 words
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          3 mins
+          7 mins
         
       </span>
     
@@ -277,15 +277,14 @@
 <h1 id="四（六）位验证码可爆破"><a href="#四（六）位验证码可爆破" class="headerlink" title="四（六）位验证码可爆破"></a>四（六）位验证码可爆破</h1><h2 id="出现的位置"><a href="#出现的位置" class="headerlink" title="出现的位置"></a>出现的位置</h2><ol>
 <li>只要是发短信的都可能存在</li>
 </ol>
-<h2 id="挖掘方法"><a href="#挖掘方法" class="headerlink" title="挖掘方法"></a>挖掘方法</h2><ol>
-<li>尝试底频率爆破</li>
-</ol>
-<h1 id="验证码回显"><a href="#验证码回显" class="headerlink" title="验证码回显"></a>验证码回显</h1><h2 id="挖掘方法-1"><a href="#挖掘方法-1" class="headerlink" title="挖掘方法"></a>挖掘方法</h2><ol>
+<h2 id="挖掘方法-尝试底频率爆破"><a href="#挖掘方法-尝试底频率爆破" class="headerlink" title="挖掘方法    尝试底频率爆破"></a>挖掘方法    尝试底频率爆破</h2><h1 id="验证码回显"><a href="#验证码回显" class="headerlink" title="验证码回显"></a>验证码回显</h1><h2 id="挖掘方法"><a href="#挖掘方法" class="headerlink" title="挖掘方法"></a>挖掘方法</h2><ol>
 <li>就直接看返回包</li>
 </ol>
+<h2 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h2><p>出现在需要邀请码的情况下，当我们使用一个错误的邀请码，抓包对面回了一个正确的验证码，或者是返回的是正确的返回包的验证码</p>
 <h1 id="只验证了验证码，没有验证绑定"><a href="#只验证了验证码，没有验证绑定" class="headerlink" title="只验证了验证码，没有验证绑定"></a>只验证了验证码，没有验证绑定</h1><p>简单的说就是拿别人的验证码，自己使用</p>
 <h1 id="修改返回包"><a href="#修改返回包" class="headerlink" title="修改返回包"></a>修改返回包</h1><p>bp 修改返回的状态</p>
 <p>可以将返回包改为</p>
+<p>可以修改状态码</p>
 <p>false -&gt; success true </p>
 <p>400  -&gt;  200 0 1 -1</p>
 <h1 id="发送验证码双写"><a href="#发送验证码双写" class="headerlink" title="发送验证码双写"></a>发送验证码双写</h1><p>比如</p>
@@ -298,10 +297,35 @@
 <h1 id="第三方登录"><a href="#第三方登录" class="headerlink" title="第三方登录"></a>第三方登录</h1><p>拦截返回包</p>
 <p>比如使用qq&#x3D;111 进行认证，截取返回包然后修改为qq&#x3D;222 进行认证</p>
 <h1 id="随意的验证码"><a href="#随意的验证码" class="headerlink" title="随意的验证码"></a>随意的验证码</h1><p>就是随便一个验证码都能能够实现功能</p>
-<h1 id="验证码为null-或者不写"><a href="#验证码为null-或者不写" class="headerlink" title="验证码为null 或者不写"></a>验证码为null 或者不写</h1><h1 id="短信发送时绕过"><a href="#短信发送时绕过" class="headerlink" title="短信发送时绕过"></a>短信发送时绕过</h1><p>我们本身接受验证码之后，重置别人的 账号</p>
+<h1 id="验证码为null-或者不写"><a href="#验证码为null-或者不写" class="headerlink" title="验证码为null 或者不写"></a>验证码为null 或者不写</h1><p>   或者是将验证码改为永真</p>
+<p>true</p>
+<p>1</p>
+<p>等</p>
+<h1 id="短信发送时绕过"><a href="#短信发送时绕过" class="headerlink" title="短信发送时绕过"></a>短信发送时绕过</h1><p>我们本身接受验证码之后，重置别人的 账号</p>
+<p>本质就是当我们修改密码的时候，前端会显示请输入（用户名&#x2F;手机号&#x2F;邮箱），这种多个因素可以实现的情况</p>
+<p>我们输入用户名，然后他会调用发验证码的模块，我们抓包修改为我们自己的手机号和验证码</p>
+<p>如果可以将别人的账号修改，就是这个漏洞</p>
 <h1 id="用户名枚举"><a href="#用户名枚举" class="headerlink" title="用户名枚举"></a>用户名枚举</h1><p>如果出现了使用用户名登录的情况下，可以尝试验证用户名枚举</p>
 <h1 id="手机号泄露"><a href="#手机号泄露" class="headerlink" title="手机号泄露"></a>手机号泄露</h1><p>尝试一个用户，他响应包中可能会出现手机号</p>
-<h1 id="重置链接可预测"><a href="#重置链接可预测" class="headerlink" title="重置链接可预测"></a>重置链接可预测</h1><h1 id="sql-注入"><a href="#sql-注入" class="headerlink" title="sql 注入"></a>sql 注入</h1>
+<h1 id="重置链接可预测"><a href="#重置链接可预测" class="headerlink" title="重置链接可预测"></a>重置链接可预测</h1><h1 id="sql-注入-万能密码"><a href="#sql-注入-万能密码" class="headerlink" title="sql 注入&#x2F;万能密码"></a>sql 注入&#x2F;万能密码</h1><h1 id="js-验证"><a href="#js-验证" class="headerlink" title="js 验证"></a>js 验证</h1><p>本质就是，在登录口的前端页面中将会出现正确的密码，把正确的密码写在了前端的代码里面</p>
+<p>一般出现在到登录口只有账号的密码的情况下</p>
+<h1 id="任意中的任意"><a href="#任意中的任意" class="headerlink" title="任意中的任意"></a>任意中的任意</h1><h2 id="出现位置"><a href="#出现位置" class="headerlink" title="出现位置"></a>出现位置</h2><ol>
+<li><p>修改水印，将属于自己的水印，在返回包中修改成别人的 </p>
+</li>
+<li><p>修改绑定</p>
+</li>
+<li><p>任意注册</p>
+<p>就是没有其他的验证，只是使用用户名进行创建用户</p>
+</li>
+<li><p>账号接管</p>
+<p>在修改用户名的情况下，不允许修改为已经存在的用户的用户名</p>
+<p>前端随便输入一个不存在的，抓包修改为已经存在的哪一个用户，然后本账号如果能接管存在的账号，则有该漏洞</p>
+</li>
+<li><p>图形化验证码绕过</p>
+<p>本质就是多次使用已经使用过的验证码</p>
+</li>
+</ol>
+<h1 id="登录口"><a href="#登录口" class="headerlink" title="登录口"></a>登录口</h1>
                 
               </div>
             
@@ -370,7 +394,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/06/10/src/%E8%B6%8A%E6%9D%83%E6%BC%8F%E6%B4%9E/" title="越权漏洞">
+                      <a href="/2024/06/10/src/%E6%9D%83%E9%99%90%E6%BC%8F%E6%B4%9E/" title="越权漏洞">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">越权漏洞</span>
                         <span class="visible-mobile">Previous</span>
