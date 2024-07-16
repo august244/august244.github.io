@@ -24,7 +24,7 @@
 <meta property="og:description" content="如果在某一个功能点存在下面的漏洞，可能其他功能点都存在这个漏洞 四（六）位验证码可爆破出现的位置 只要是发短信的都可能存在  挖掘方法    尝试底频率爆破验证码回显挖掘方法 就直接看返回包  变形出现在需要邀请码的情况下，当我们使用一个错误的邀请码，抓包对面回了一个正确的验证码，或者是返回的是正确的返回包的验证码 只验证了验证码，没有验证绑定简单的说就是拿别人的验证码，自己使用 修改返回包bp">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-06-09T06:28:45.000Z">
-<meta property="article:modified_time" content="2024-06-27T06:31:35.085Z">
+<meta property="article:modified_time" content="2024-07-13T07:27:29.948Z">
 <meta property="article:author" content="August Rosenberg">
 <meta property="article:tag" content="src">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          765 words
+          784 words
         
       </span>
     
@@ -294,6 +294,7 @@
 <p>有些时候甚至可以在接受到code </p>
 <p>然后携带着code 进行请求</p>
 <p>mobile&#x3D;a,b,c&amp;code&#x3D;6722..</p>
+<p>在任何阶段都可以进行，不仅仅是发送验证码</p>
 <h1 id="第三方登录"><a href="#第三方登录" class="headerlink" title="第三方登录"></a>第三方登录</h1><p>拦截返回包</p>
 <p>比如使用qq&#x3D;111 进行认证，截取返回包然后修改为qq&#x3D;222 进行认证</p>
 <h1 id="随意的验证码"><a href="#随意的验证码" class="headerlink" title="随意的验证码"></a>随意的验证码</h1><p>就是随便一个验证码都能能够实现功能</p>
