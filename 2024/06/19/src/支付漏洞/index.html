@@ -16,15 +16,15 @@
   <meta name="author" content="August Rosenberg">
   <meta name="keywords" content="">
   
-    <meta name="description" content="支付漏洞的根本 低价充值，越权花别人的钱  相同的价格获得更多的东西 比如获取到更长的特权时间  支付密码绕过   负数购买就是使用余额购买东西的场景下，将数量改成-2 这样的话，如果余额增加了说明存在这个漏洞 修改内容提交订单的时候修改订单上的服务，再生成订单 修改金额生成订单的包或者支付的包  负数付款金额减少 小数点迁移 购买隐藏的  无限重放&#x2F;并发 退款重放  正负叠加多个商品的">
+    <meta name="description" content="支付漏洞的根本 低价充值，越权花别人的钱  相同的价格获得更多的东西 比如获取到更长的特权时间  支付密码绕过   负数购买就是使用余额购买东西的场景下，将数量改成-2 这样的话，如果余额增加了说明存在这个漏洞 恶意锁库存生成订单库存没有了，应该是付款了之后才会减少 修改内容提交订单的时候修改订单上的服务，再生成订单 修改金额生成订单的包或者支付的包  负数付款金额减少 小数点迁移 购买隐藏的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="支付漏洞">
 <meta property="og:url" content="http://august244.github.io/2024/06/19/src/%E6%94%AF%E4%BB%98%E6%BC%8F%E6%B4%9E/index.html">
 <meta property="og:site_name" content="august">
-<meta property="og:description" content="支付漏洞的根本 低价充值，越权花别人的钱  相同的价格获得更多的东西 比如获取到更长的特权时间  支付密码绕过   负数购买就是使用余额购买东西的场景下，将数量改成-2 这样的话，如果余额增加了说明存在这个漏洞 修改内容提交订单的时候修改订单上的服务，再生成订单 修改金额生成订单的包或者支付的包  负数付款金额减少 小数点迁移 购买隐藏的  无限重放&#x2F;并发 退款重放  正负叠加多个商品的">
+<meta property="og:description" content="支付漏洞的根本 低价充值，越权花别人的钱  相同的价格获得更多的东西 比如获取到更长的特权时间  支付密码绕过   负数购买就是使用余额购买东西的场景下，将数量改成-2 这样的话，如果余额增加了说明存在这个漏洞 恶意锁库存生成订单库存没有了，应该是付款了之后才会减少 修改内容提交订单的时候修改订单上的服务，再生成订单 修改金额生成订单的包或者支付的包  负数付款金额减少 小数点迁移 购买隐藏的">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-06-19T02:35:54.000Z">
-<meta property="article:modified_time" content="2024-06-19T03:10:01.237Z">
+<meta property="article:modified_time" content="2024-07-17T07:13:14.842Z">
 <meta property="article:author" content="August Rosenberg">
 <meta property="article:tag" content="src">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          203 words
+          229 words
         
       </span>
     
@@ -283,6 +283,7 @@
 </li>
 </ol>
 <h1 id="负数购买"><a href="#负数购买" class="headerlink" title="负数购买"></a>负数购买</h1><p>就是使用余额购买东西的场景下，将数量改成-2 这样的话，如果余额增加了说明存在这个漏洞</p>
+<h1 id="恶意锁库存"><a href="#恶意锁库存" class="headerlink" title="恶意锁库存"></a>恶意锁库存</h1><p>生成订单库存没有了，应该是付款了之后才会减少</p>
 <h1 id="修改内容"><a href="#修改内容" class="headerlink" title="修改内容"></a>修改内容</h1><p>提交订单的时候修改订单上的服务，再生成订单</p>
 <h1 id="修改金额"><a href="#修改金额" class="headerlink" title="修改金额"></a>修改金额</h1><p>生成订单的包或者支付的包</p>
 <ul>

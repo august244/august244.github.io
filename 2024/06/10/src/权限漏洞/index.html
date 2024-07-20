@@ -24,7 +24,7 @@
 <meta property="og:description" content="重点关注 收货地址 这个点还可以测试是否可以并发添加，xss等 增删改查  用户  编辑  预览  报告  订单   绕过方法 修改到只有id 和 token 的状态，然后重放 删除其余的参数  如果发现网站一闪而过到了sso  可以尝试抓住包不放，或者drop 掉让你跳转的数据包 或者是直接禁用js 可以造成未授权访问  需要多条地址 有可能在一些情况下，必须有一个保留的数据  双因子绕过 可以">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-06-10T09:38:08.000Z">
-<meta property="article:modified_time" content="2024-06-28T06:53:29.830Z">
+<meta property="article:modified_time" content="2024-07-16T06:11:48.019Z">
 <meta property="article:author" content="August Rosenberg">
 <meta property="article:tag" content="src">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          403 words
+          475 words
         
       </span>
     
@@ -330,17 +330,34 @@
 <h2 id="漏洞挖掘"><a href="#漏洞挖掘" class="headerlink" title="漏洞挖掘"></a>漏洞挖掘</h2><ol>
 <li>修改id</li>
 </ol>
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><ol>
+<li>常见的id 类越权</li>
+</ol>
+<h2 id="绕过方式"><a href="#绕过方式" class="headerlink" title="绕过方式"></a>绕过方式</h2><ol>
+<li><p>删除其他的字段</p>
+<p>删除多余的字段</p>
+</li>
+<li><p>cookie 可遍历的越权</p>
+</li>
+<li></li>
+</ol>
 <h1 id="未授权访问漏洞"><a href="#未授权访问漏洞" class="headerlink" title="未授权访问漏洞"></a>未授权访问漏洞</h1><h2 id="出现位置-1"><a href="#出现位置-1" class="headerlink" title="出现位置"></a>出现位置</h2><ol>
 <li>404&#x2F;403 页面</li>
 <li>登录口</li>
 <li>直接扫描</li>
 </ol>
 <h2 id="漏洞挖掘-1"><a href="#漏洞挖掘-1" class="headerlink" title="漏洞挖掘"></a>漏洞挖掘</h2><ol>
-<li>登录一个账号，然后将所有经过的url 记录下来，再进行访问</li>
-<li>findsomething 进行查找</li>
-<li>google hack 语法</li>
-<li>直接扫目录</li>
-<li>nday</li>
+<li><p>登录一个账号，然后将所有经过的url 记录下来，再进行访问</p>
+</li>
+<li><p>findsomething 进行查找</p>
+</li>
+<li><p>google hack 语法</p>
+<p>针对不同网站搜索的资料是不一样的，比如说招聘类的网站的话，可以查找pdf 查保单之内的东西</p>
+</li>
+<li><p>直接扫目录</p>
+</li>
+<li><p>nday</p>
+</li>
 </ol>
 
                 
