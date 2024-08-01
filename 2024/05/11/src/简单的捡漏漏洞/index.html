@@ -16,19 +16,19 @@
   <meta name="author" content="August Rosenberg">
   <meta name="keywords" content="">
   
-    <meta name="description" content="dig  测试邮箱  swaks –body “钓鱼邮件测试” –header “Subject:钓鱼测试” -t @163.com -f  “&#116;&#x65;&#x73;&#x74;&#64;&#x62;&#x61;&#105;&#x64;&#117;&#x2e;&#99;&#111;&#x6d;“   测试dns 域传送 首先 1dig ns 根域名  然后根据  中  部分做测试">
+    <meta name="description" content="dig  测试邮箱  swaks –body “钓鱼邮件测试” –header “Subject:钓鱼测试” -t @163.com -f  “&#x74;&#x65;&#115;&#116;&#64;&#x62;&#97;&#x69;&#x64;&#117;&#x2e;&#x63;&#x6f;&#109;“   测试dns 域传送 首先 1dig ns 根域名  然后根据  中  部分做测试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简单的捡漏漏洞">
 <meta property="og:url" content="http://august244.github.io/2024/05/11/src/%E7%AE%80%E5%8D%95%E7%9A%84%E6%8D%A1%E6%BC%8F%E6%BC%8F%E6%B4%9E/index.html">
 <meta property="og:site_name" content="august">
-<meta property="og:description" content="dig  测试邮箱  swaks –body “钓鱼邮件测试” –header “Subject:钓鱼测试” -t @163.com -f  “&#116;&#x65;&#x73;&#x74;&#64;&#x62;&#x61;&#105;&#x64;&#117;&#x2e;&#99;&#111;&#x6d;“   测试dns 域传送 首先 1dig ns 根域名  然后根据  中  部分做测试">
+<meta property="og:description" content="dig  测试邮箱  swaks –body “钓鱼邮件测试” –header “Subject:钓鱼测试” -t @163.com -f  “&#x74;&#x65;&#115;&#116;&#64;&#x62;&#97;&#x69;&#x64;&#117;&#x2e;&#x63;&#x6f;&#109;“   测试dns 域传送 首先 1dig ns 根域名  然后根据  中  部分做测试">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://allinit-1317182407.cos.ap-nanjing.myqcloud.com/src/image-20240511005640488.png">
 <meta property="og:image" content="https://allinit-1317182407.cos.ap-nanjing.myqcloud.com/src/image-20240511005705421.png">
 <meta property="og:image" content="https://allinit-1317182407.cos.ap-nanjing.myqcloud.com/src/image-20240519141645770.png">
 <meta property="og:image" content="https://allinit-1317182407.cos.ap-nanjing.myqcloud.com/src/image-20240626200605998.png">
 <meta property="article:published_time" content="2024-05-10T16:54:26.000Z">
-<meta property="article:modified_time" content="2024-07-27T09:04:18.705Z">
+<meta property="article:modified_time" content="2024-07-30T14:54:58.746Z">
 <meta property="article:author" content="August Rosenberg">
 <meta property="article:tag" content="src">
 <meta name="twitter:card" content="summary_large_image">
@@ -283,7 +283,7 @@
 <ul>
 <li><p>测试邮箱</p>
 <blockquote>
-<p>swaks –body “钓鱼邮件测试” –header “Subject:钓鱼测试” -t @163.com -f  “<a href="mailto:&#116;&#x65;&#x73;&#x74;&#64;&#x62;&#x61;&#105;&#x64;&#117;&#x2e;&#99;&#111;&#x6d;">&#116;&#x65;&#x73;&#x74;&#64;&#x62;&#x61;&#105;&#x64;&#117;&#x2e;&#99;&#111;&#x6d;</a>“</p>
+<p>swaks –body “钓鱼邮件测试” –header “Subject:钓鱼测试” -t @163.com -f  “<a href="mailto:&#x74;&#x65;&#115;&#116;&#64;&#x62;&#97;&#x69;&#x64;&#117;&#x2e;&#x63;&#x6f;&#109;">&#x74;&#x65;&#115;&#116;&#64;&#x62;&#97;&#x69;&#x64;&#117;&#x2e;&#x63;&#x6f;&#109;</a>“</p>
 </blockquote>
 </li>
 <li><p>测试dns 域传送</p>
@@ -427,7 +427,7 @@
 <p>360QUAKE:domain:”<strong>根域名替换</strong>“ AND (response: “webapi.amap.com” OR response: “api.map.baidu.com” OR response: “map.qq.com”)</p>
 </blockquote>
 <blockquote>
-<p>高德webapi：<a target="_blank" rel="noopener" href="https://restapi.amap.com/v3/direction/walking?origin=116.434307,39.90909&destination=116.434446,39.90816&key=**%E8%BF%99%E9%87%8C%E5%86%99key">https://restapi.amap.com/v3/direction/walking?origin=116.434307,39.90909&amp;destination=116.434446,39.90816&amp;key=**这里写key</a>**</p>
+<p>高德webapi：<a target="_blank" rel="noopener" href="https://webapi.amap.com/v3/direction/walking?origin=116.434307,39.90909&destination=116.434446,39.90816&key=%E8%BF%99%E9%87%8C%E5%86%99key">https://webapi.amap.com/v3/direction/walking?origin=116.434307,39.90909&amp;destination=116.434446,39.90816&amp;key=这里写key</a></p>
 <p>高德jsapi：<a target="_blank" rel="noopener" href="https://restapi.amap.com/v3/geocode/regeo?key=**%E8%BF%99%E9%87%8C%E5%86%99key**&s=rsv3&location=116.434446,39.90816&callback=jsonp_258885_&platform=JS">https://restapi.amap.com/v3/geocode/regeo?key=**这里写key**&amp;s=rsv3&amp;location=116.434446,39.90816&amp;callback=jsonp_258885_&amp;platform=JS</a></p>
 <p>高德小程序定位：<a target="_blank" rel="noopener" href="https://restapi.amap.com/v3/geocode/regeo?key=**%E8%BF%99%E9%87%8C%E5%86%99key**&location=117.19674,39.14784&extensions=all&s=rsx&platform=WXJS&appname=c589cf63f592ac13bcab35f8cd18f495&sdkversion=1.2.0&logversion=2.0">https://restapi.amap.com/v3/geocode/regeo?key=**这里写key**&amp;location=117.19674%2C39.14784&amp;extensions=all&amp;s=rsx&amp;platform=WXJS&amp;appname=c589cf63f592ac13bcab35f8cd18f495&amp;sdkversion=1.2.0&amp;logversion=2.0</a></p>
 <p>百度webapi：<a target="_blank" rel="noopener" href="https://api.map.baidu.com/place/v2/search?query=ATM%E6%9C%BA&tag=%E9%93%B6%E8%A1%8C&region=%E5%8C%97%E4%BA%AC&output=json&ak=**%E8%BF%99%E9%87%8C%E5%86%99key">https://api.map.baidu.com/place/v2/search?query=ATM机&amp;tag=银行&amp;region=北京&amp;output=json&amp;ak=**这里写key</a>**</p>
