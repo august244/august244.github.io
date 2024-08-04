@@ -16,22 +16,24 @@
   <meta name="author" content="August Rosenberg">
   <meta name="keywords" content="">
   
-    <meta name="description" content="不符合逻辑的，都是逻辑漏洞 没有危害的都是bug  后台测试逻辑 登录到了后台还是主要是对api&#x2F;页面 进行测试  使用findsomething 对接口进行未授权的测试 对findsomething 里的接口，使用f12 对其搜索，然后可能找到对应的使用的方式，然后尝试使用 非api 等字眼的可能是页面，可以尝试直接访问   对于越权操作 关注的应该是请求体而不是请求头里面的cook">
+    <meta name="description" content="填充数据挖掘src 中，必须要深入业务，深入业务就是要造数据 越权&#x2F;支付 帖子站 是否存在可控的参数 对每一个参数都要进行修改  越权删除 保留至少数据，也就是说，有一些情况是系统必须有一个或者是多个数据，所以在保留最少数据的时候，进行删除   逻辑缺陷 创建一个队伍生成两百积分，但是当你解散一个队伍的时候，他没有收回积分 并且再次创建的时候发现还会获取积分   案例fuzz 是什么简单">
 <meta property="og:type" content="article">
-<meta property="og:title" content="越权">
-<meta property="og:url" content="http://august244.github.io/2024/08/01/L/%E8%B6%8A%E6%9D%83/index.html">
+<meta property="og:title" content="思路扩展">
+<meta property="og:url" content="http://august244.github.io/2024/08/04/src/%E6%80%9D%E8%B7%AF%E6%89%A9%E5%B1%95/index.html">
 <meta property="og:site_name" content="august">
-<meta property="og:description" content="不符合逻辑的，都是逻辑漏洞 没有危害的都是bug  后台测试逻辑 登录到了后台还是主要是对api&#x2F;页面 进行测试  使用findsomething 对接口进行未授权的测试 对findsomething 里的接口，使用f12 对其搜索，然后可能找到对应的使用的方式，然后尝试使用 非api 等字眼的可能是页面，可以尝试直接访问   对于越权操作 关注的应该是请求体而不是请求头里面的cook">
+<meta property="og:description" content="填充数据挖掘src 中，必须要深入业务，深入业务就是要造数据 越权&#x2F;支付 帖子站 是否存在可控的参数 对每一个参数都要进行修改  越权删除 保留至少数据，也就是说，有一些情况是系统必须有一个或者是多个数据，所以在保留最少数据的时候，进行删除   逻辑缺陷 创建一个队伍生成两百积分，但是当你解散一个队伍的时候，他没有收回积分 并且再次创建的时候发现还会获取积分   案例fuzz 是什么简单">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-08-01T14:23:12.000Z">
-<meta property="article:modified_time" content="2024-08-01T14:56:06.476Z">
+<meta property="og:image" content="https://allinit-1317182407.cos.ap-nanjing.myqcloud.com/src/image-20240804213231670.png">
+<meta property="article:published_time" content="2024-08-04T13:02:42.000Z">
+<meta property="article:modified_time" content="2024-08-04T13:53:50.411Z">
 <meta property="article:author" content="August Rosenberg">
-<meta property="article:tag" content="L">
+<meta property="article:tag" content="src">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://allinit-1317182407.cos.ap-nanjing.myqcloud.com/src/image-20240804213231670.png">
   
   
   
-  <title>越权 - august</title>
+  <title>思路扩展 - august</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="越权"></span>
+            <span id="subtitle" data-typed-text="思路扩展"></span>
           
         </div>
 
@@ -208,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-01 22:23" pubdate>
-          August 1, 2024 pm
+        <time datetime="2024-08-04 21:02" pubdate>
+          August 4, 2024 pm
         </time>
       </span>
     
@@ -220,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          225 words
+          411 words
         
       </span>
     
@@ -231,7 +233,7 @@
         
         
         
-          2 mins
+          4 mins
         
       </span>
     
@@ -268,36 +270,44 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">越权</h1>
+            <h1 id="seo-header">思路扩展</h1>
             
             
               <div class="markdown-body">
                 
-                <ol>
-<li>不符合逻辑的，都是逻辑漏洞</li>
-<li>没有危害的都是bug</li>
+                <h1 id="填充数据"><a href="#填充数据" class="headerlink" title="填充数据"></a>填充数据</h1><p>挖掘src 中，必须要深入业务，深入业务就是要造数据</p>
+<h1 id="越权-支付"><a href="#越权-支付" class="headerlink" title="越权&#x2F;支付"></a>越权&#x2F;支付</h1><ol>
+<li><p>帖子站</p>
+<p>是否存在可控的参数</p>
+<p>对每一个参数都要进行修改</p>
+</li>
+<li><p>越权删除</p>
+<p>保留至少数据，也就是说，有一些情况是系统必须有一个或者是多个数据，所以在保留最少数据的时候，进行删除</p>
+</li>
 </ol>
-<h1 id="后台测试逻辑"><a href="#后台测试逻辑" class="headerlink" title="后台测试逻辑"></a>后台测试逻辑</h1><ol>
-<li><p>登录到了后台还是主要是对api&#x2F;页面 进行测试</p>
-<ul>
-<li>使用findsomething 对接口进行未授权的测试</li>
-<li>对findsomething 里的接口，使用f12 对其搜索，然后可能找到对应的使用的方式，然后尝试使用</li>
-<li>非api 等字眼的可能是页面，可以尝试直接访问</li>
-</ul>
+<h1 id="逻辑缺陷"><a href="#逻辑缺陷" class="headerlink" title="逻辑缺陷"></a>逻辑缺陷</h1><ol>
+<li><p>创建一个队伍生成两百积分，但是当你解散一个队伍的时候，他没有收回积分</p>
+<p>并且再次创建的时候发现还会获取积分</p>
 </li>
-<li><p>对于越权操作</p>
-<p>关注的应该是请求体而不是请求头里面的cookie 和token </p>
+</ol>
+<h1 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h1><h2 id="fuzz-是什么"><a href="#fuzz-是什么" class="headerlink" title="fuzz 是什么"></a>fuzz 是什么</h2><p>简单的说就是猜</p>
+<p>也就是说通过一部分api 进行猜测说其他方式的api<br>还有一种fuzz 是版本不同，比如有一个&#x2F;api&#x2F;v2&#x2F;download 有可能就会存在&#x2F;api&#x2F;download或者是 &#x2F;api&#x2F;v1&#x2F;download</p>
+<h2 id="bp-history-加载api-接口"><a href="#bp-history-加载api-接口" class="headerlink" title="bp history 加载api 接口"></a>bp history 加载api 接口</h2><p><img src="https://allinit-1317182407.cos.ap-nanjing.myqcloud.com/src/image-20240804213231670.png" srcset="/img/loading.gif" lazyload alt="image-20240804213231670"></p>
+<p>也就是当有一个漏洞需要复杂uuid 的情况下，就尝试搜索history 里面是否存在有api 会泄露uuid</p>
+<h2 id="论坛可用点-帖子站"><a href="#论坛可用点-帖子站" class="headerlink" title="论坛可用点(帖子站)"></a>论坛可用点(帖子站)</h2><ol>
+<li><p>制造点数据</p>
 </li>
-<li><p>如果发现增删改查中有没有出现的点</p>
-<p>可以尝试fuzz 接口	 </p>
-<p>比如修改的接口的update&#x2F;edit</p>
+<li><p>评论上传图片</p>
+<p>发现数据包里是一个data 数据是url 编码内容</p>
+<p>有可能该data 数据里面存在js 标签</p>
+<p>可以尝试利用该标签</p>
+<p>但是如果发现js 脚本无法加载，就可以尝试使用img 然后使用src -&gt; 使用退就可以造成全站瘫痪，但是这个时候使用dnslog 进行测试</p>
 </li>
-<li><p>如果发现了反馈等地方</p>
-<p>由于我们没有办法查看到，可以尝试dnslog</p>
-</li>
-<li><p>垂直越权</p>
-<p>当我们是system 或者是管理员的情况下我们可以尝试及性能垂直越权</p>
-</li>
+</ol>
+<h2 id="越权支付的骚操作"><a href="#越权支付的骚操作" class="headerlink" title="越权支付的骚操作"></a>越权支付的骚操作</h2><p>本身不算洞</p>
+<p>但是在一下的条件下可以是算洞的</p>
+<ol>
+<li>团队版和个人版的软件</li>
 </ol>
 
                 
@@ -311,7 +321,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/L/" class="print-no-link">#L</a>
+        <a href="/tags/src/" class="print-no-link">#src</a>
       
     </div>
   
@@ -323,8 +333,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>越权</div>
-      <div>http://august244.github.io/2024/08/01/L/越权/</div>
+      <div>思路扩展</div>
+      <div>http://august244.github.io/2024/08/04/src/思路扩展/</div>
     </div>
     <div class="license-meta">
       
@@ -336,7 +346,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>August 1, 2024</div>
+          <div>August 4, 2024</div>
         </div>
       
       
@@ -368,18 +378,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/08/04/src/%E6%80%9D%E8%B7%AF%E6%89%A9%E5%B1%95/" title="思路扩展">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">思路扩展</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/01/L/%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%E5%BF%85%E5%85%88%E5%88%A9%E5%85%B6%E5%99%A8/" title="工欲善其事必先利其器">
-                        <span class="hidden-mobile">工欲善其事必先利其器</span>
+                      <a href="/2024/08/01/L/%E8%B6%8A%E6%9D%83/" title="越权">
+                        <span class="hidden-mobile">越权</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
