@@ -16,22 +16,22 @@
   <meta name="author" content="August Rosenberg">
   <meta name="keywords" content="">
   
-    <meta name="description" content="案例危害如何提升取决于你的想象力本身就是一个越权分享的一个案例，也就是一个中危，但是我们可以给审核说可以分享一些木马，或者是色情图片 通过返回包绕过限制 可以通过并发尝试绕过创建的限制  也可以通过返回包的形式，进行修改限制 比如在添加一个用户的时候，或者什么时候，可以通过修改check 是否达到要求的返回包，然后让其发送创建的请求，从而绕过限制   双因子越权如果发现有一个参数是可以遍历的，然后">
+    <meta name="description" content="jwt 的玩法 使用hashcat 进行爆破  alg:”none” 也就是第一段 然后再把第三段滞空，但是保留点  修改参数   案例支付可以少花钱，但可能有时候不能不花钱 负 + 正 &#x3D; 正 可以尝试使用四舍五入  绕过邀请我有一个文档，邀请人参与我的文档群，我邀请了就等他同意 但是我的文旦可以添加协助者，发现添加协助者的参数可以遍历，就可以尝试遍历user_id  然后就发现他们无">
 <meta property="og:type" content="article">
-<meta property="og:title" content="枚举到账号接管">
-<meta property="og:url" content="http://august244.github.io/2024/08/05/L/%E6%9E%9A%E4%B8%BE%E5%88%B0%E8%B4%A6%E5%8F%B7%E6%8E%A5%E7%AE%A1/index.html">
+<meta property="og:title" content="深入业务">
+<meta property="og:url" content="http://august244.github.io/2024/08/06/L/%E6%B7%B1%E5%85%A5%E4%B8%9A%E5%8A%A1/index.html">
 <meta property="og:site_name" content="august">
-<meta property="og:description" content="案例危害如何提升取决于你的想象力本身就是一个越权分享的一个案例，也就是一个中危，但是我们可以给审核说可以分享一些木马，或者是色情图片 通过返回包绕过限制 可以通过并发尝试绕过创建的限制  也可以通过返回包的形式，进行修改限制 比如在添加一个用户的时候，或者什么时候，可以通过修改check 是否达到要求的返回包，然后让其发送创建的请求，从而绕过限制   双因子越权如果发现有一个参数是可以遍历的，然后">
+<meta property="og:description" content="jwt 的玩法 使用hashcat 进行爆破  alg:”none” 也就是第一段 然后再把第三段滞空，但是保留点  修改参数   案例支付可以少花钱，但可能有时候不能不花钱 负 + 正 &#x3D; 正 可以尝试使用四舍五入  绕过邀请我有一个文档，邀请人参与我的文档群，我邀请了就等他同意 但是我的文旦可以添加协助者，发现添加协助者的参数可以遍历，就可以尝试遍历user_id  然后就发现他们无">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-08-05T13:41:14.000Z">
-<meta property="article:modified_time" content="2024-08-05T15:47:27.698Z">
+<meta property="article:published_time" content="2024-08-06T15:49:26.000Z">
+<meta property="article:modified_time" content="2024-08-06T16:17:32.164Z">
 <meta property="article:author" content="August Rosenberg">
 <meta property="article:tag" content="L">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>枚举到账号接管 - august</title>
+  <title>深入业务 - august</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="枚举到账号接管"></span>
+            <span id="subtitle" data-typed-text="深入业务"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-05 21:41" pubdate>
-          August 5, 2024 pm
+        <time datetime="2024-08-06 23:49" pubdate>
+          August 6, 2024 pm
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          352 words
+          286 words
         
       </span>
     
@@ -268,34 +268,33 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">枚举到账号接管</h1>
+            <h1 id="seo-header">深入业务</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h1><h2 id="危害如何提升取决于你的想象力"><a href="#危害如何提升取决于你的想象力" class="headerlink" title="危害如何提升取决于你的想象力"></a>危害如何提升取决于你的想象力</h2><p>本身就是一个越权分享的一个案例，也就是一个中危，但是我们可以给审核说可以分享一些木马，或者是色情图片</p>
-<h2 id="通过返回包绕过限制"><a href="#通过返回包绕过限制" class="headerlink" title="通过返回包绕过限制"></a>通过返回包绕过限制</h2><ol>
-<li><p>可以通过并发尝试绕过创建的限制</p>
+                <h1 id="jwt-的玩法"><a href="#jwt-的玩法" class="headerlink" title="jwt 的玩法"></a>jwt 的玩法</h1><ol>
+<li><p>使用hashcat 进行爆破</p>
 </li>
-<li><p>也可以通过返回包的形式，进行修改限制</p>
-<p>比如在添加一个用户的时候，或者什么时候，可以通过修改check 是否达到要求的返回包，然后让其发送创建的请求，从而绕过限制</p>
+<li><p>alg:”none”</p>
+<p>也就是第一段</p>
+<p>然后再把第三段滞空，但是保留点</p>
 </li>
-</ol>
-<h2 id="双因子越权"><a href="#双因子越权" class="headerlink" title="双因子越权"></a>双因子越权</h2><p>如果发现有一个参数是可以遍历的，然后有一个参数是不可遍历的，就可以尝试爆破然后出结果</p>
-<h2 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h2><p>并发本身不是一个漏洞，但是可以搭配其他漏洞</p>
-<p>比如有一个添加地址的地方存在越权，就可以尝试使用并发越权添加的方式，从而提升漏洞</p>
-<p>还有一种情况就是，一个人只能预约一次，但是通过并发的形式，可以一个人预约多次</p>
-<h2 id="隐藏起来并不是没有"><a href="#隐藏起来并不是没有" class="headerlink" title="隐藏起来并不是没有"></a>隐藏起来并不是没有</h2><p>有两种情况</p>
-<ol>
-<li><p>接口可能没有出现</p>
-</li>
-<li><p>参数</p>
-<p>比如有1,3</p>
-<p>那可能就会存在2</p>
+<li><p>修改参数</p>
 </li>
 </ol>
-<h2 id="默认密码"><a href="#默认密码" class="headerlink" title="默认密码"></a>默认密码</h2><p>初始的默认密码</p>
-<p>就可以尝试接管账号</p>
+<h1 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h1><h2 id="支付可以少花钱，但可能有时候不能不花钱"><a href="#支付可以少花钱，但可能有时候不能不花钱" class="headerlink" title="支付可以少花钱，但可能有时候不能不花钱"></a>支付可以少花钱，但可能有时候不能不花钱</h2><ol>
+<li>负 + 正 &#x3D; 正</li>
+<li>可以尝试使用四舍五入</li>
+</ol>
+<h2 id="绕过邀请"><a href="#绕过邀请" class="headerlink" title="绕过邀请"></a>绕过邀请</h2><p>我有一个文档，邀请人参与我的文档群，我邀请了就等他同意</p>
+<p>但是我的文旦可以添加协助者，发现添加协助者的参数可以遍历，就可以尝试遍历user_id </p>
+<p>然后就发现他们无感加入了我的文档群</p>
+<p>危害：1. 信息泄露   2. 作家号，可以涨粉  3. 诈骗，就是欺骗</p>
+<h2 id="heapdump"><a href="#heapdump" class="headerlink" title="heapdump"></a>heapdump</h2><p>没有ak&#x2F;sk 遇到了亚马逊</p>
+<p>可以通过env 查找桶名，然后使用aws s3api 进行遍历和接管</p>
+<h2 id="下拉框的重要性"><a href="#下拉框的重要性" class="headerlink" title="下拉框的重要性"></a>下拉框的重要性</h2><p>就是随便输入一个字符之后，发现会通过该字符去搜索匹配，然后抓包</p>
+<p>修改对应返回的数量，就可以越权查看信息，但是我们可以将名字修改为全站信息泄露，这样可以提高漏洞的危害</p>
 
                 
               </div>
@@ -320,8 +319,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>枚举到账号接管</div>
-      <div>http://august244.github.io/2024/08/05/L/枚举到账号接管/</div>
+      <div>深入业务</div>
+      <div>http://august244.github.io/2024/08/06/L/深入业务/</div>
     </div>
     <div class="license-meta">
       
@@ -333,7 +332,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>August 5, 2024</div>
+          <div>August 6, 2024</div>
         </div>
       
       
@@ -365,18 +364,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/08/06/L/%E6%B7%B1%E5%85%A5%E4%B8%9A%E5%8A%A1/" title="深入业务">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">深入业务</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/04/src/%E6%80%9D%E8%B7%AF%E6%89%A9%E5%B1%95/" title="思路扩展">
-                        <span class="hidden-mobile">思路扩展</span>
+                      <a href="/2024/08/05/L/%E6%9E%9A%E4%B8%BE%E5%88%B0%E8%B4%A6%E5%8F%B7%E6%8E%A5%E7%AE%A1/" title="枚举到账号接管">
+                        <span class="hidden-mobile">枚举到账号接管</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
