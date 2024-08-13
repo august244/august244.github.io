@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>管理系统思路</title>
+    <link href="/2024/08/13/L/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E6%80%9D%E8%B7%AF/"/>
+    <url>/2024/08/13/L/%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E6%80%9D%E8%B7%AF/</url>
+    
+    <content type="html"><![CDATA[<h1 id="check-list"><a href="#check-list" class="headerlink" title="check list"></a>check list</h1><p>一个好的check list 很重要，但是真正好的check list 应该随着场景的不同，他的顺序应该会发生改变 </p><h1 id="登录口"><a href="#登录口" class="headerlink" title="登录口"></a>登录口</h1><ol><li><p>扫码登录是否存在二次验证</p><p>如果没有存在二次验证，那就是一个漏洞</p><p>可以直接说成任意用户接管</p></li><li><p>验证码相关漏洞</p><ul><li>全是0</li><li>改为null</li><li>滞空</li><li>绑定关系测试</li></ul></li><li><p>任意用户类漏洞</p></li><li><p>修改返回包</p></li><li><p>用户名枚举</p></li><li><p>弱口令</p></li><li><p>暴力破解</p></li><li><p>fuzz 忘记密码</p></li><li><p>搜索path 隐藏接口</p></li></ol><h1 id="登录到后台"><a href="#登录到后台" class="headerlink" title="登录到后台"></a>登录到后台</h1><ol><li>添加功能</li><li>基本的增删改查</li><li>每一个功能都去过一遍</li><li>记录，一定要去看，一定要去使用</li><li>优先级测试</li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>L</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>拨开迷雾看本质</title>
     <link href="/2024/08/11/L/%E6%8B%A8%E5%BC%80%E8%BF%B7%E9%9B%BE%E7%9C%8B%E6%9C%AC%E8%B4%A8/"/>
     <url>/2024/08/11/L/%E6%8B%A8%E5%BC%80%E8%BF%B7%E9%9B%BE%E7%9C%8B%E6%9C%AC%E8%B4%A8/</url>
