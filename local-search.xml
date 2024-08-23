@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>技巧不只是某一个场景</title>
+    <link href="/2024/08/21/L/%E6%8A%80%E5%B7%A7%E4%B8%8D%E5%8F%AA%E6%98%AF%E6%9F%90%E4%B8%80%E4%B8%AA%E5%9C%BA%E6%99%AF/"/>
+    <url>/2024/08/21/L/%E6%8A%80%E5%B7%A7%E4%B8%8D%E5%8F%AA%E6%98%AF%E6%9F%90%E4%B8%80%E4%B8%AA%E5%9C%BA%E6%99%AF/</url>
+    
+    <content type="html"><![CDATA[<h1 id="痛点"><a href="#痛点" class="headerlink" title="痛点"></a>痛点</h1><ol><li>不要执着于每一个src，或者某一个系统</li><li>挖掘漏洞需要时间的积累</li><li>多学习，多挖洞</li><li>先练习好某一个类型的漏洞，再去多尝试其他的漏洞</li></ol><h1 id="双写不仅仅是手机号"><a href="#双写不仅仅是手机号" class="headerlink" title="双写不仅仅是手机号"></a>双写不仅仅是手机号</h1><p>双写的方式有两种</p><ol><li><p>双写参数</p></li><li><p>逗号</p></li><li><ul><li></li></ul><p>如果userid - userid2</p></li></ol><h1 id="垃圾字符"><a href="#垃圾字符" class="headerlink" title="垃圾字符"></a>垃圾字符</h1><p>很多时候垃圾字符都是顺手一加</p><p>+86</p><p>x</p><p>. 注意这个是. 是每一次增加一个</p><p>,1(这个值是遍历) 比如user,1  user,2   …….</p><h1 id="删除多余的字符"><a href="#删除多余的字符" class="headerlink" title="删除多余的字符"></a>删除多余的字符</h1><h1 id="一带一"><a href="#一带一" class="headerlink" title="一带一"></a>一带一</h1><p>也就是说，这种情况下必须，必须先去实现网站的基本功能，你就会发现很多剩下的功能了</p><h1 id="删除多余的数据"><a href="#删除多余的数据" class="headerlink" title="删除多余的数据"></a>删除多余的数据</h1><h1 id="无中生有"><a href="#无中生有" class="headerlink" title="无中生有"></a>无中生有</h1><p>也就是添加参数</p><h1 id="万能数据"><a href="#万能数据" class="headerlink" title="万能数据"></a>万能数据</h1><ol><li><p>万能的验证码</p><p>比如111111等等</p></li><li><p>万能的手机号</p><p>11111111111等等</p></li><li><p>只要是填写数据或者是认证的地方就可以尝试</p><p>比如邀请码等等</p></li></ol><h1 id="修改状态"><a href="#修改状态" class="headerlink" title="修改状态"></a>修改状态</h1><p>0 -&gt; 1 </p><p>false -&gt; true</p><p>500 -&gt; 200</p><h1 id="路径穿越（bypass-403）"><a href="#路径穿越（bypass-403）" class="headerlink" title="路径穿越（bypass 403）"></a>路径穿越（bypass 403）</h1><ol><li><p><code>//</code></p></li><li><p><code>/../</code></p></li><li><p>比如在ssrf 的时候</p><p>当我们使用<a href="http://127.0.0.1/">http://127.0.0.1</a> 发现存在问题</p></li><li><p><code>/..;/</code></p></li></ol><h1 id="大小写"><a href="#大小写" class="headerlink" title="大小写"></a>大小写</h1><p>就是可以尝试将大写的变成小写的</p><p>或者是小变大</p><p>这种情况是由于网站使用的是拦截器，但是没有对参数完整的过滤，只拦截对应的参数</p><h1 id="敏感参数的抓取"><a href="#敏感参数的抓取" class="headerlink" title="敏感参数的抓取"></a>敏感参数的抓取</h1><p>比如某一个点需要进行判断你是否达到要求</p><p>然后这种往往都是一个一个参数进行控制</p><p>所以尝试删除对应的参数，或者将false -&gt; true </p><h1 id="退了还能享受权限"><a href="#退了还能享受权限" class="headerlink" title="退了还能享受权限"></a>退了还能享受权限</h1><p>场景一</p><p>冲了一个vip 的场景，然后使用人工进行退款，然后如果发现退款了之后，没有立马的收回vip 权限的话，俺就是一个漏洞</p><p>场景二</p><p>垂直越权，赋予了子用户的权限，然后收回，发现短时间还能使用这个功能的话，那就是存在漏洞</p><h1 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h1><h2 id="双写绕过"><a href="#双写绕过" class="headerlink" title="双写绕过"></a>双写绕过</h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>L</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>js篇</title>
     <link href="/2024/08/15/src/js%E7%AF%87/"/>
     <url>/2024/08/15/src/js%E7%AF%87/</url>
